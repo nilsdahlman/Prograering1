@@ -25,6 +25,14 @@ public class Nisses {
 		
 		System.out.println("Vad är ditt telefonnummer?");
 		String telefon = input.nextLine();
+		
+		input.close();
+		
+		System.out.println("Information:");
+		System.out.println("Namn: " + namn);
+		System.out.println("Ålder: " + ålder);
+		System.out.println("Adress: " + adress + "\br      " + postnummer + stad);
+		System.out.println("Telefon: " + telefon);
 	}
 
 }
