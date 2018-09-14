@@ -1,15 +1,31 @@
 
-public class lol {
-	int max = 999999999999;
-	int min = -999999999999;
-	
-	int tal1 = 5;
-	int tal2 = 4;
-	int tal3 = 7;
-	int tal4 = 5;
-	int tal5 = 9;
-	
-	int summa = tal1+tal2+tal3+tal4+tal5; // 28
-	double medel = summa/5.0
+import java.util.Scanner;
 
+public class lol {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Änter tan nombers");
+		int tal1 = input.nextInt();
+		int tal2 = input.nextInt();
+		int tal3 = input.nextInt();
+		int tal4 = input.nextInt();
+		int tal5 = input.nextInt();
+		int tal6 = input.nextInt();
+		int tal7 = input.nextInt();
+		int tal8 = input.nextInt();
+		int tal9 = input.nextInt();
+		int tal10 = input.nextInt();
+		
+		int max = 999999999;
+		int min = -999999999;
+		
+		int summa = tal1+tal2+tal3+tal4+tal5+tal6+tal7+tal8+tal9+tal10; // 28
+		double medel1 = summa/5.0; // 5
+		double medel2 = summa;
+		
+		System.out.println(medel1);
+
+	}
+	
 }
