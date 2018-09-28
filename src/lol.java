@@ -82,7 +82,7 @@ public class lol {
 		double medel2 = summa;
 		
 		
-		System.out.println("Middlai:1");
+		System.out.println("Middlei");
 		System.out.println(medel1);
 		System.out.println(" ");
 		System.out.println("max!");
