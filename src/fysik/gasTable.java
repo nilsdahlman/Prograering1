@@ -3,9 +3,10 @@ package fysik;
 public enum gasTable {
 
 	AIR(1.29, 1.01), 
-	O2(1.43, 0.92), 
-	OXYGEN(1.43, 0.92);
-	
+	OXYGEN(1.43, 0.92),
+	ARGON(1.78, 0.52),
+	FLOUR(1.72, 0.75),
+	KLOR(3.21, 0.5);
 
 	double density;
 	double heatCapacity;

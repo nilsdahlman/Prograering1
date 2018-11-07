@@ -18,7 +18,7 @@ public class PhysLib {
 	}
 	
 	public static double pressureUnderWater(double deep) {
-		return FluidTable.H20.density * G * deep;
+		return FluidTable.WATER.density * G * deep;
 	}
 	
 	public static double kineticEnergy(double mass, double velocity) {
@@ -29,9 +29,9 @@ public class PhysLib {
 		return mass * G * height;
 	}
 	
-	//Ludvig hjälper mig med denna//
+	//Roten ur (2 * g * height). Math.sqrt(*insert tal or ekvation*)//
 	public static double fallSpeed(double height) {
-		return height * G;
+		return Math.sqrt(2 * G * height);
 	}
 	
 	public static double delta(double first, double last) {
@@ -39,7 +39,50 @@ public class PhysLib {
 	}
 	
 	public static double volumeToMass(FluidTable fluid, double volume) {
-		return
+		return volume * fluid.density;
 	}
 	
+	public static double volumeToMass(gasTable gas, double volume) {
+		return volume * gas.density;
+	}
+	
+	public static double volumeToMass(SolidTable solid, double volume) {
+		return volume * solid.density;
+	}
+	
+	public static double svtVelocity(double distance, double time) {
+		return distance / time; 
+	}
+	
+	public static double svtDistance(double velocity, double time) {
+		return velocity * time;
+	}
+	
+	public static double svtTime(double distance, double velocity) {
+		return distance * velocity;
+	}
+	
+	public static double work(double force, double distance) {
+		return force * distance;
+	}
+	
+	public static double power(double work, double time) {
+		return work / time;
+	}
+	
+	public static double heat(SolidTable solid, double mass, double deltaT) {
+		return solid.heatCapacity * mass * deltaT;
+	}
+	
+	public static double heat(FluidTable fluid, double volume, double deltaT) {
+		return fluid.heatCapacity * volume * deltaT;
+	}
+	
+	public static double heat(gasTable gas, double volume, double deltaT) {
+		return gas.heatCapacity * volume * deltaT;
+	}
+	
+	public static double velocityToHeight(double velocity) {
+		return Math.pow(velocity, 2)/(2 * G);
+	}
 }
