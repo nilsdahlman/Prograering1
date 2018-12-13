@@ -26,7 +26,16 @@ public class MethodTest {
 		
 		//En bil med massan 740kg accelererar med konstant acceleration från 0-100 på 4.4 sekunder. Hur stor effekt har bilens motor uppnått?
 		
-		System.out.println(PhysLib.jagvetinte.jagärsjuk,tröttochharontihuvudet.jagförsökteochjaggjordealltdethärsjälv(medLITEhjälpfrånandra)jagfattarfortfarandeinteprogrameringochjagbaraorekarintegöramerjustförtillfället.dufårhaentrevlighelgmedmycketlyckaochjagantardåattjagfårFpåuppgiftenvilketinteärsåkulmenjagförsökteochddetfinnsintesåmycketmerjagkansäga.GodnattSovSåGott;
+		System.out.println(PhysLib.power(PhysLib.work(740, 100), 4.4));
+		
+		//En studsboll släpps från 10 meters höjd och varje gång den nuddar marken tappar den 1% av sin energi. Hur många gånger kommer bollen studsa i marken innan den inte studsar hörge än 0.5 meter?
+
+		int bounce = 0;  
+	    for (double i = 10; i > 0.5;) {
+	    	
+	    	i = PhysLib.velocityToHeight(PhysLib.fallSpeed(i) - i/100);
+	    	bounce++;
+	    }
 	}
 	
 }
